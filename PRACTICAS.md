@@ -1,4 +1,4 @@
-# SWAP_2017-2018
+# SWAP 2017/2018 : PORTFOLIO DE PRÁCTICAS
 
 
-## PORTFOLIO DE PRÁCTICAS 
+##  PRÁCTICA 1: Preparación de las herramientas
