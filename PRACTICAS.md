@@ -45,7 +45,7 @@ y _"hola2.html"_ en **ubuserver02** con el siguiente cuerpo :
 	NOTA: Para editar desde el Terminal, he utilizado la herramienta "vim".
 
 ---	
-** MODO DE USO herramienta vim **	
+**MODO DE USO herramienta vim**	
 
 		$ vim hola.html
 			- pulsas "i", para entrar en modo de edición
