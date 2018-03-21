@@ -73,7 +73,7 @@ Para esto, desde la máquina 1, introducimos la órden :
 	
 y, tras introducir la clave correspondiente al login ubuserver02, de la máquina 2, habríamos accedido a dicha máquina :
 
-![ConexiónDeUbuserver01aUbuServer02](https://github.com/Jesus715/SWAP_2017-2018/blob/master/cURLde_ubuserver01aubuserver02.png) 
+![ConexiónDeUbuserver01aUbuserver02](https://github.com/Jesus715/SWAP_2017-2018/blob/master/conexionde_ubuserver01a_ubuserver02.png) 
 
 
 Haremos el mismo proceso para acceder a la máquina correspondiente al servidor 1, desde la máquina 2 :
