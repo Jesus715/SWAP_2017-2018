@@ -63,7 +63,7 @@ Así quedaría el archivo crontab de mi máquina 1 :
 
 Para probar que se realiza correctamente, he creado un fichero de prueba en el directorio _/var/www/_ de la máquina 2, llamado _pruebacrontab.txt_. Este fichero deberá de aparecer en el directorio de la máquina 1, cuando haya pasado 1h y se haya ejecutado la órden del crontab. 
 
-![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/pruebacronenubu02.png) 
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/pruebacrontab.png) 
 
 ##Falta añadir imagen de maquina1 donde se vea que crontab ha funcionado
 
