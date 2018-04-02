@@ -51,3 +51,18 @@ Como vemos, se han copiado los archivos `hola2.html` e `index.html` correspondie
 lo tengo conseguido en ubuserver01, en ubuserver02 no sale
 
 * **CUARTO PUNTO : Programar tareas con crontab** 
+Vamos a _/etc/_ y abrimos con vim el fichero **crontab**.
+En el editor en línea programamos para que se actualice el contenido de _/var/www/_ correspondiente a la máquina 2 en la máquina 1, cada hora (en mi caso, lo he programado para que se haga a las en punto). 
+Esto se hace de la siguiente manera : 
+
+	00 *		* * *	root		rsync -avz -e ssh 192.168.18.131:/var/www/ /var/www/
+	
+Así quedaría el archivo crontab de mi máquina 1 :
+
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/crontabubuserver1.png) 
+
+Para probar que se realiza correctamente, he creado un fichero de prueba en el directorio _/var/www/_ de la máquina 2, llamado _pruebacrontab.txt_. Este fichero deberá de aparecer en el directorio de la máquina 1, cuando haya pasado 1h y se haya ejecutado la órden del crontab. 
+
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/pruebacronenubu02.png) 
+
+
