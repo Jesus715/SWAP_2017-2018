@@ -13,8 +13,8 @@
  		$ sudo service ssh restart
  
 	Tras esto, lo único que hay que hacer es lo siguiente : 
-	![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/tarde1a2.png) 
-	![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/tarde2a1.png) 
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/tarde1a2.png) 
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/tarde2a1.png) 
 	
 * **SEGUNDO PUNTO : clonado de una carpeta entre las dos máquinas** 
 
