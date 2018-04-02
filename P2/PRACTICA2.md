@@ -48,7 +48,7 @@ Como vemos, se han copiado los archivos `hola2.html` e `index.html` correspondie
 
 
 * **TERCER PUNTO : Acceso sin contraseña para ssh** 
-lo tengo conseguido en ubuserver01, en ubuserver02 no sale
+##lo tengo conseguido en ubuserver01, en ubuserver02 no sale
 
 * **CUARTO PUNTO : Programar tareas con crontab** 
 Vamos a _/etc/_ y abrimos con vim el fichero **crontab**.
@@ -65,4 +65,5 @@ Para probar que se realiza correctamente, he creado un fichero de prueba en el d
 
 ![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/pruebacronenubu02.png) 
 
+##Falta añadir imagen de maquina1 donde se vea que crontab ha funcionado
 
