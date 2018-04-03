@@ -59,17 +59,17 @@ Esto se hace de la siguiente manera :
 	
 Así quedaría el archivo crontab de mi máquina 1 :
 
-![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/crontabubuserver1.png) 
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/crontab.png) 
 
 Para probar que se realiza correctamente, he creado un fichero de prueba en el directorio _/var/www/_ de la máquina 2, llamado _pruebacrontab.txt_. Este fichero deberá de aparecer en el directorio de la máquina 1, cuando haya pasado 1h y se haya ejecutado la órden del crontab. 
 
 - Aquí tenemos la vista local en la máquina 2 : 
 ![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/pruebacrontab.png) 
 
-- Aquí tenemos la vista local en la máquina 1 (a la espera de que den las 01:00): 
+- Aquí tenemos la vista local en la máquina 1 (a la espera de que den las 0X:00): 
 ![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/pruebamaquina1-1.png) 
 
-- Y, por último, aquí tenemos la prueba, de forma local en la máquina 1, de que se ha ejecutado correctamente el crontab y ha clonado el archivo de prueba en la máquina 1 :
+- Y, por último, aquí tenemos la prueba, de forma local en la máquina 1, de que se ha ejecutado correctamente el crontab y ha clonado el archivo de prueba en la máquina 1 a las en punto:
  
-##Falta añadir imagen de maquina1 donde se vea que crontab ha funcionado
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/pruebamaquina1-2.png) 
 
