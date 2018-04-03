@@ -66,10 +66,10 @@ Para probar que se realiza correctamente, he creado un fichero de prueba en el d
 - Aquí tenemos la vista local en la máquina 2 : 
 ![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/pruebacrontab.png) 
 
-- Aquí tenemos la vista local en la máquina 1 (a la espera de que den las 0X:00): 
+- Aquí tenemos la vista local en la máquina 1, antes de la ejecución del crontab (a la espera de que den las 0X:00): 
 ![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/pruebamaquina1-1.png) 
 
-- Y, por último, aquí tenemos la prueba, de forma local en la máquina 1, de que se ha ejecutado correctamente el crontab y ha clonado el archivo de prueba en la máquina 1 a las en punto:
+- Y, por último, en la siguiente imágen, de forma local en la máquina 1, vemos que se ha ejecutado correctamente el crontab y ha clonado el archivo de prueba en la máquina 1 a las en punto:
  
 ![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/pruebamaquina1-2.png) 
 
