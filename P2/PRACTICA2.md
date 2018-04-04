@@ -34,10 +34,21 @@ $ rsync -avz -e ssh ubuserver02@192.168.18.131:/var/www/ /var/www/
 
 y tras meter la clave correspondiente al usuario "ubuserver02" de la máquina 2, ya estaría hecho.
 
-Como vemos, se han copiado los archivos `hola2.html` e `index.html` correspondientes a la máquina 2 :
+Aquí vemos el estado del directorio _/var/www/html/_ antes de hacer **rsync** : 
 
-![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/rsyncde2en1.png) 
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/antesdeRSYNCenubu1.png) 
 
+Como vemos, se han copiado los archivos `hola2.html`,`index.html` y `pruebacrontab.txt`, correspondientes a la máquina 2 :
+
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/despuesDersyncEnubu1.png) 
+
+De la misma manera actuaríamos para la máquina 2 :
+
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/antesdeRSYNCenubu2.png) 
+
+Y así es como quedaría el directorio _/var/www/html/_ tras el **rsync**, en la máquina 2 : 
+
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/despuesDersyncEnubu2.png) 
 
 * **TERCER PUNTO : Acceso sin contraseña para ssh** 
 			
