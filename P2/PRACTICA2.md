@@ -67,10 +67,10 @@ De forma análoga haríamos para sincronizar desde la máquina 2 :
 
 * **CUARTO PUNTO : Programar tareas con crontab** 
 Vamos a _/etc/_ y abrimos con vim el fichero **crontab**.
-En el editor en línea programamos para que se actualice el contenido de _/var/www/_ correspondiente a la máquina 2 en la máquina 1, cada hora (en mi caso, lo he programado para que se haga a las en punto). 
+En el editor en línea programamos para que se actualice el contenido de _/var/www/_ correspondiente a la máquina 2 en la máquina 1, cada hora (en mi caso, lo he programado para que se haga a las y 15). 
 Esto se hace de la siguiente manera : 
 
-	00 *		* * *	root		rsync -avz -e ssh 192.168.18.131:/var/www/ /var/www/
+15 *		* * *	root		rsync -avz -e ssh ubuserver02@192.168.18.131:/var/www/ /var/www/
 	
 Así quedaría el archivo crontab de mi máquina 1 :
 
@@ -79,12 +79,12 @@ Así quedaría el archivo crontab de mi máquina 1 :
 Para probar que se realiza correctamente, he creado un fichero de prueba en el directorio _/var/www/_ de la máquina 2, llamado _pruebacrontab.txt_. Este fichero deberá de aparecer en el directorio de la máquina 1, cuando haya pasado 1h y se haya ejecutado la órden del crontab. 
 
 - Aquí tenemos la vista local en la máquina 2 : 
-![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/pruebacrontab.png) 
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/antesdeCRONTABubu2.png) 
 
-- Aquí tenemos la vista local en la máquina 1, antes de la ejecución del crontab (a la espera de que den las 0X:00): 
-![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/pruebamaquina1-1.png) 
+- Aquí tenemos la vista local en la máquina 1, antes de la ejecución del crontab (a la espera de que den las 0X:15): 
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/antesdeCRONTABubu1.png) 
 
-- Y, por último, en la siguiente imágen, de forma local en la máquina 1, vemos que se ha ejecutado correctamente el crontab y ha clonado el archivo de prueba en la máquina 1 a las en punto:
+- Y, por último, en la siguiente imágen, de forma local en la máquina 1, vemos que se ha ejecutado correctamente el crontab y ha clonado el archivo de prueba en la máquina 1 a las y 15:
  
-![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/pruebamaquina1-2.png) 
+
 
