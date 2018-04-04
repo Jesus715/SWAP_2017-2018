@@ -30,16 +30,16 @@ Lo siguiente es hacer que el usuario sea el dueño de la carpeta donde residen l
 
 Para probar el funcionamiento del rsync, vamos a clonar la carpeta con el contenido del servidor web principal de la máquina 2, en la máquina 1 (y viceversa en la máquina 2 con el contenido de la máquina 1). Esto lo haremos con la órden :
 
-$ rsync -avz -e ssh 192.168.18.131:/var/www/ /var/www/
+$ rsync -avz -e ssh ubuserver02@192.168.18.131:/var/www/ /var/www/
 
-y tras meter la clave correspondiente a la máquina 2, ya estaría hecho.
+y tras meter la clave correspondiente al usuario "ubuserver02" de la máquina 2, ya estaría hecho.
 ___
 En mi caso, como he tenido problemas con los permisos, he tenido que crear una clave pública y mandársela a la máquina 2. El proceso para ello ha sido el siguiente :
 
 			Dentro de ubuserver01 : 
 			1.  $ sudo su (y meto la clave para ser root de la máquina1)
 			2.  $ ssh-keygen -t rsa
-			3.  $ ssh-copy-id -i /root/.ssh/id_rsa.pub ubuserver02@192.168.18.131
+			3.  $ ssh-copy-id -i ubuserver02@192.168.18.131
 			Y ya estaría listo
 ___
 Como vemos, se han copiado los archivos `hola2.html` e `index.html` correspondientes a la máquina 2 :
@@ -48,7 +48,7 @@ Como vemos, se han copiado los archivos `hola2.html` e `index.html` correspondie
 
 
 * **TERCER PUNTO : Acceso sin contraseña para ssh** 
-##lo tengo conseguido en ubuserver01, en ubuserver02 no sale
+
 
 * **CUARTO PUNTO : Programar tareas con crontab** 
 Vamos a _/etc/_ y abrimos con vim el fichero **crontab**.
