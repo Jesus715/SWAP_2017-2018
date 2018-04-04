@@ -33,22 +33,26 @@ Para probar el funcionamiento del rsync, vamos a clonar la carpeta con el conten
 $ rsync -avz -e ssh ubuserver02@192.168.18.131:/var/www/ /var/www/
 
 y tras meter la clave correspondiente al usuario "ubuserver02" de la máquina 2, ya estaría hecho.
-___
-En mi caso, como he tenido problemas con los permisos, he tenido que crear una clave pública y mandársela a la máquina 2. El proceso para ello ha sido el siguiente :
 
-			Dentro de ubuserver01 : 
-			1.  $ sudo su (y meto la clave para ser root de la máquina1)
-			2.  $ ssh-keygen -t rsa
-			3.  $ ssh-copy-id -i ubuserver02@192.168.18.131
-			Y ya estaría listo
-___
 Como vemos, se han copiado los archivos `hola2.html` e `index.html` correspondientes a la máquina 2 :
 
 ![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/rsyncde2en1.png) 
 
 
 * **TERCER PUNTO : Acceso sin contraseña para ssh** 
+			
+Dentro de ubuserver01 :
+ 
+			1.  $ ssh-keygen -b 4096 -t rsa
+			2.  $ ssh-copy-id ubuserver02@192.168.18.131
 
+Y ya estaría listo.
+
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/sshde1a2.png) 
+
+De forma análoga haríamos para sincronizar desde la máquina 2 :
+
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P2/sshde2a1.png) 
 
 * **CUARTO PUNTO : Programar tareas con crontab** 
 Vamos a _/etc/_ y abrimos con vim el fichero **crontab**.
