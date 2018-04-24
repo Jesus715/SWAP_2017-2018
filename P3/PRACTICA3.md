@@ -28,7 +28,7 @@ Una vez hecho esto, introduzco la siguiente línea en el Terminal :
 		
 Me daba error y no se iniciaba **nginx**. Para solucionarlo, he tenido que modificar el archivo _/etc/nginx/nginx.conf_, comentando la siguiente línea : 
 
-	![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P3/nginxconfcomentada.png) 
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P3/nginxconfcomentada.png) 
 	
 Para finalizar, reinicio nginx en el Terminal :
 
