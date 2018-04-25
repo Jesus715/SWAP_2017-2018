@@ -1,17 +1,20 @@
-#PRÁCTICA 3: Balanceo de carga
+# PRÁCTICA 3: Balanceo de carga
 
-Lo primero que he tenido que hacer es añadir una nueva máquina virtual a la que llamo Balanceador, **sin instalarle apache, ni LAMP**.
+
+* **PRIMER PUNTO : configurar una máquina e instalar el nginx como balanceador de carga**
+
+	Lo primero que he tenido que hacer es añadir una nueva máquina virtual a la que llamo Balanceador, **sin instalarle apache, ni LAMP**.
 																																																																																																																																																																						
-Después, y una vez dentro de la máquina balanceadora, he tenido que cambiar el idioma del terminal, ya que, por defecto, me venía en inglés. 
+	Después, y una vez dentro de la máquina balanceadora, he tenido que cambiar el idioma del terminal, ya que, por defecto, me venía en inglés. 
 Para ello, he entrado en modo **_root_** y he introducido el siguiente comando : 
 
 		$ loadkeys es
+
 		
-donde `es` hace referencia al idioma seleccionado : español
+	donde `es` hace referencia al idioma seleccionado : español
 
-Me voy a mantener como **_root_**, porque lo voy a necesitar a continuación.
+	Me voy a mantener como **_root_**, porque lo voy a necesitar a continuación.
 
-* **PRIMER PUNTO : configurar una máquina e instalar el nginx como balanceador de carga**
 
 
 Introduzco las siguientes órdenes para la instalación de **nginx** :
@@ -41,4 +44,19 @@ Y ya estaría lista la instalación y configuración de **nginx**.
 Para que se nos muestre cada vez una máquina, le he dado valores distintos a la prioridad de cada una (si no especifico nada, tendrían la misma prioridad ambas). Esto se hace modificando el archivo de configuración de **nginx** para que quede de la siguiente manera : 
 
 ![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P3/defaultnginxPESOS.png) 
+
+
+* **SEGUNDO PUNTO : configurar una máquina e instalar el haproxy como balanceador de carga**
+
+	Lo primero que he tenido que hacer es añadir una nueva máquina virtual a la que llamo Balanceador, **sin instalarle apache, ni LAMP**.
+																																																																																																																																																																						
+	Después, y una vez dentro de la máquina balanceadora, he tenido que cambiar el idioma del terminal, ya que, por defecto, me venía en inglés. 
+Para ello, he entrado en modo **_root_** y he introducido el siguiente comando : 
+
+		$ loadkeys es
+
+		
+	donde `es` hace referencia al idioma seleccionado : español
+
+	Me voy a mantener como **_root_**, porque lo voy a necesitar a continuación.
 	
