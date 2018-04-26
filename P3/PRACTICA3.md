@@ -55,6 +55,7 @@ Ahora veremos como, llamando a curL con  la IP del **Balanceador Nginx** desde m
 
 ![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P3/curl-al-BalanceadorNginx.png) 
 
+___
 
 * **SEGUNDO PUNTO : configurar una máquina e instalar el haproxy como balanceador de carga**
 
@@ -81,7 +82,12 @@ Tras esto, lo que hay que hacer es irnos al directorio _/etc/haproxy/_ y editar 
 
 Para que quede de la siguiente manera : 
 
+		En el editor nano :
+		- F3 para guardar cambios
+		- F2 para salir del editor nano
+
 ![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P3/configuracionHaproxy.png) 
+
 
 A continuación, reiniciaremos el servicio con :
 
@@ -97,3 +103,23 @@ Como podemos comprobar, todo parece estar correcto, ya que no muestra ningún me
 
 Para finalizar este apartado, obtengo la IP del **Balanceador haproxy** (192.168.18.134), y repito el último paso del punto anterior, llamando a curL del balanceador desde mi PC Local :
 
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P3/curlHaproxy.png) 
+
+___
+
+* **TERCER PUNTO : someter a la granja web a una alta carga, generada con la herramienta Apache Benchmark, teniendo primero nginx y después haproxy**
+
+Primero necesitamos instalar Apache Benchamark, en nuestro PC Local. Para ello:
+
+		$ sudo apt update
+		$ sudo apt install -y apache2
+
+Ahora, arrancamos **apache2** en nuestro PC Local con :
+
+		$ sudo service apache2 start
+		
+Junto a apache2, ya tenemos instalado ab (**Apache Benchmark**). 
+
+El siguiente paso es realizar el benchmark sobre la **máquina balanceadora nginx** (192.168.18.133) : 
+
+		$ ab -n 10000 -c 10 http://192.168.18.133/index.html
