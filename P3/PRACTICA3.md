@@ -123,3 +123,17 @@ Junto a apache2, ya tenemos instalado ab (**Apache Benchmark**).
 El siguiente paso es realizar el benchmark sobre la **máquina balanceadora nginx** (192.168.18.133) : 
 
 		$ ab -n 10000 -c 10 http://192.168.18.133/index.html
+		
+Que nos muestra lo siguiente por la pantalla del Terminal : 
+
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P3/abnginx.png) 
+
+El último paso es realizar el benchmark sobre la **máquina balanceadora haproxy** (192.168.18.134) : 
+
+		$ ab -n 10000 -c 10 http://192.168.18.134/index.html
+		
+El cual, nos muestra lo siguiente por la pantalla del Terminal : 
+
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P3/abhaproxy.png) 
+
+Para finalizar este apartado, y comparando los tiempos obtenidos en ambos balanceadores, llegamos a la conclusión de que **el Balanceador haproxy** tiene menor tiempo de respuesta medio que el Balanceador nginx.
