@@ -53,7 +53,7 @@ Despues, hago un `cat` a los archivos `index.html` de cada máquina de forma loc
 
 Ahora veremos como, llamando a curL con  la IP del **Balanceador Nginx** desde mi PC, éste nos devuelve el fichero `index.html` correspondiente, cada vez que lo llamemos, a una máquina diferente :
 
-![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P3/curl-al-BalanceadorNginx.png)  
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P3/curl-al-BalanceadorNginx.png) 
 
 
 * **SEGUNDO PUNTO : configurar una máquina e instalar el haproxy como balanceador de carga**
@@ -75,3 +75,18 @@ Introduzco las siguientes órdenes para la instalación de **haproxy** :
 		$ sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoremove
 		$ sudo apt-get install haproxy
 	
+Tras esto, lo que hay que hacer es irnos al directorio _/etc/haproxy/_ y editar el fichero `haproxy.cfg` con la siguiente órden :
+
+		$ sudo nano haproxy.cfg
+
+Para que quede de la siguiente manera : 
+
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P3/configuracionHaproxy.png) 
+
+A continuación, reiniciaremos el servicio con :
+
+		$ sudo service haproxy restart
+		
+Por último, lanzamos el servicio **haproxy** : 
+
+		$ sudo /usr/sbin/haproxy -f /etc/haproxy/haproxy.cfg
