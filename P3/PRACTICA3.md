@@ -90,3 +90,10 @@ A continuación, reiniciaremos el servicio con :
 Por último, lanzamos el servicio **haproxy** : 
 
 		$ sudo /usr/sbin/haproxy -f /etc/haproxy/haproxy.cfg
+		
+Como podemos comprobar, todo parece estar correcto, ya que no muestra ningún mensaje de error :
+
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P3/NOerrorHaproxy.png) 
+
+Para finalizar este apartado, obtengo la IP del **Balanceador haproxy** (192.168.18.134), y repito el último paso del punto anterior, llamando a curL del balanceador desde mi PC Local :
+
