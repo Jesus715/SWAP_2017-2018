@@ -71,4 +71,7 @@ Para ello, he entrado en modo **_root_** y he introducido el siguiente comando :
 	Me voy a mantener como **_root_**, porque lo voy a necesitar a continuación.
 
 Introduzco las siguientes órdenes para la instalación de **haproxy** :
+
+		$ sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoremove
+		$ sudo apt-get install haproxy
 	
