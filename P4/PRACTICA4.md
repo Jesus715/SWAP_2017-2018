@@ -21,4 +21,9 @@ A continuación, vamos a editar el archivo de configuración `default-ssl.conf` 
 
 `$ sudo nano /etc/apache2/sites-available/default-ssl.conf`
 
-		
+
+Nos	queda de la siguiente manera :
+
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P4/ficheroSSLconfModificado.png) 
+
+
