@@ -24,6 +24,9 @@ A continuación, vamos a editar el archivo de configuración `default-ssl.conf` 
 
 Nos	queda de la siguiente manera :
 
-![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P4/ficheroSSLconfModificado.png) 
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P4/defaultSSLconfModificado.png) 
 
+Ahora, activamos el sitio default-ssl y reiniciamos apache con:
 
+		$ a2ensite default-ssl
+		$ service apache2 reload
