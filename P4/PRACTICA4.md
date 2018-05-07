@@ -30,3 +30,15 @@ Ahora, activamos el sitio default-ssl y reiniciamos apache con:
 
 		$ a2ensite default-ssl
 		$ service apache2 reload
+
+Para que la otra máquina y el Balanceador tengan el certificado, hago un `rsync` de la máquina donde generé el certificado **ubuserver01**, desde la máquina que quiero recibir el directorio :
+
+
+Desde ubuserver02 :
+**entro en modo root primero**, y ejecuto :
+`$ rsync -avz -e ssh ubuserver01@192.168.18.132:/etc/apache2/ssl /etc/apache2/` 
+
+Seguidamente, tenemos que modificar el fichero `default-ssl.conf`, y dejarlo de la misma forma que hicimos anteriormente con el de la máquina1.
+
+Para la máquina balanceadora seguiré este mismo proceso de configuración y, además, modificaré el archivo `default.conf`para que quede de la siguiente manera : 
+
