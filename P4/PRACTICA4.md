@@ -45,7 +45,7 @@ Seguidamente, tenemos que modificar el fichero `default-ssl.conf`, y dejarlo de 
 
 Para la máquina balanceadora seguiré este mismo proceso de configuración y, además, modificaré el archivo `default.conf`para que quede de la siguiente manera : 
 
-
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P4/defaultSSL.png) 
 
 
 ___
