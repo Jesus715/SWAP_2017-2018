@@ -74,4 +74,8 @@ Así quedaría el fichero **script.sh** :
 
 ![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P4/script.png) 
 
+Por último, lo que hay que hacer para que se ejecute al arrancar el sistema es lo siguiente : 
+
+		1 - 
+
 
