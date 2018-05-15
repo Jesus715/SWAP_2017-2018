@@ -70,4 +70,8 @@ Lo primero que he hecho es copiar y renombrar el archivo `rc.local` con el nombr
 Despues, defino reglas para permitir acceso por la interfaz, apertura del puerto 22 (ssh), puerto 80 y 443 (para HTTP y HTTPS).
 La interfaz de mi máquina balanceadora es **ens33**.
 
+Así quedaría el fichero **script.sh** :
+
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P4/script.png) 
+
 
