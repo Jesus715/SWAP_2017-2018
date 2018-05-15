@@ -76,6 +76,26 @@ Así quedaría el fichero **script.sh** :
 
 Por último, lo que hay que hacer para que se ejecute al arrancar el sistema es lo siguiente : 
 
-		1 - 
+		1 - crear el fichero iptablesconfig.service
+		2 - darle los permisos : -rwxr-xr-x
+		$ chmod 755 /lib/systemd/system/iptablesconfig.service
 
+El fichero **iptablesconfig.service**, que se almacena en el directorio _/lib/systemd/system/_ quedaría de la siguiente manera : 
 
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P4/iptablesService.png) 
+
+Recargo para que lea de nuevo los servicios con la siguiente órden :
+
+		$ systemctl daemon-reload
+  
+  
+Y voy a activar el servicio :
+
+		$ systemctl enable iptablesconfig.service
+		
+Y, para finalizar, reinicio el equipo.
+___
+ 
+Ahora podemos comprobar el correcto funcionamiento del script con la órden :
+
+		$ iptables -L -n -v
