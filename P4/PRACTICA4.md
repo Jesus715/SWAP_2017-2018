@@ -99,3 +99,11 @@ ___
 Ahora podemos comprobar el correcto funcionamiento del script con la órden :
 
 		$ iptables -L -n -v
+		
+- IPTABLES ANTES DE REINICIAR : 
+
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P4/iptablesANTES.png) 
+
+- IPTABLES DESPUES DE REINICIAR : 
+
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P4/iptablesDESPUES.png) 
