@@ -45,8 +45,17 @@ Seguidamente, tenemos que modificar el fichero `default-ssl.conf`, y dejarlo de 
 
 Para la máquina balanceadora seguiré este mismo proceso de configuración y, además, modificaré el archivo `default.conf`para que quede de la siguiente manera : 
 
+**Comento ssl on para que funcione correctamente.**
+
 ![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P4/defaultSSL.png) 
 
+Tras esto, ya podemos comprobar cómo haciendo un **curl** en mi PC local, tanto con _http_, como con _https_, nos devuelve los `index.html` correspondientes : 
+
+-- **HTTP :**
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P4/curlHTTP.png) 
+
+-- **HTTPS :**
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P4/curlHTTPS.png) 
 
 ___
 
