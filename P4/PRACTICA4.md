@@ -96,7 +96,7 @@ Y voy a activar el servicio :
 Y, para finalizar, reinicio el equipo.
 ___
  
-Ahora podemos comprobar el correcto funcionamiento del script con la órden :
+Ahora podemos comprobar el correcto funcionamiento del script con la órden (para ejecutarla tendríamos que hacerlo desde **root**):
 
 		$ iptables -L -n -v
 		
