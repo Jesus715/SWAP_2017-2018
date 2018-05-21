@@ -116,3 +116,15 @@ Seguidamente, tenemos que reiniciar el servicio :
 
 			$ /etc/init.d/mysql restart
 
+Como vemos, no me ha dado ningún error :
+
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P5/restartenMAESTROsinerrores.png) 
+
+ Ahora podemos continuar con la configuración del **_esclavo_**, de forma similar a como he hecho la del maestro. Lo único que cambia es que `server-id = 2`. Aquí vemos cómo quedaría : 
+
+
+ 
+ Esto es tan sencillo debido a que mi versión de **MySQL** es superior a la 5.5 (5.7.22).
+ 
+ 
+
