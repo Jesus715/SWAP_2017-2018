@@ -2,7 +2,7 @@
 
 
 
-* **PRIMER PUNTO : Crear una BD e insertar datos**
+* **PRIMER PUNTO : Crear una BD con al menos una tabla y algunos datos.**
 
 	-- En la máquina **ubuserver01** :
 	
@@ -45,7 +45,7 @@ Y salimos de la interfaz de comandos en línea.
 
 ___
 
-* **SEGUNDO PUNTO : Realizar una copia de seguridad con mysqldump**
+* **SEGUNDO PUNTO : Realizar la copia de seguridad de la BD completa usando mysqldump en la máquina principal y copiar el archivo de copia de seguridad a la máquina secundaria.**
 
 Antes de hacer la copia de seguridad en el archivo .sql debemos evitar que se acceda a la BD para cambiar nada, bloqueando las tablas.
 
@@ -76,6 +76,10 @@ Aquí vemos cómo se ha realizado correctamente la copia :
 
 ![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P5/scpDEubuserver1Enubuserver2.png) 
 
+___
+
+* **TERCER PUNTO : Restaurar dicha copia de seguridad en la segunda máquina (clonado manual de la BD), de forma que en ambas máquinas esté esa BD de forma idéntica.**
+
 Ahora, en la **máquina 2**, vamos a entrar en la interfaz de comandos en línea de **MySQL** y vamos a crear la BD vacía a la que le vamos a pasar la copia de la que tenemos en la máquina _ubuserver01_ :
 
 		$ mysql -u root -p
@@ -91,3 +95,17 @@ Como vemos, hemos creado una BD vacía en **ubuserver02** :
 A continuación vamos a volcar el contenido del fichero `contactos.sql` que nos hemos traído desde **ubuserver01**, en fichero vacío de contactos en la BD de **ubuserver02** :
 
 		$ mysql -u root -p contactos < /tmp/contactos.sql
+		
+Para finalizar este apartado, y comprobar que se ha hecho la copia correctamente, vamos a entrar en la interfaz de la máquina 2, y vamos a ejecutar la órden :
+
+		mysql> select * from datos;
+		
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P5/copiaCORRECTAenubuserver02.png) 
+
+___
+
+* **CUARTO PUNTO : Realizar la configuración maestro-esclavo de los servidores MySQL para que la replicación de datos se realice automáticamente.**
+
+Vamos a configurar el **_maestro_** en la máquina **ubuserver01**, y el **_esclavo_** en la máquina **ubuserver02**.
+
+En **ubuserver01**, entramos en modo **root** y editamos el archivo _/etc/mysql/mysql.conf.d/mysqld.cnf_ con la herramienta **vim** para dejarlo de la siguiente manera :
