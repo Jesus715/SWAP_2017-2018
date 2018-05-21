@@ -35,6 +35,11 @@
 			Y con el comando:
 			mysql> select * from datos;
 			Estamos diciendo que nos muestre todo(*) de la tabla datos.
+			
+	Nuestra tabla en la máquina **ubuserver01** quedaría así :
+
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P5/tablaDATOSubuserver01.png) 
+
 
 
 ___
