@@ -83,3 +83,11 @@ Ahora, en la **máquina 2**, vamos a entrar en la interfaz de comandos en línea
 		
 		mysql> create database contactos;
 		mysql> quit
+		
+Como vemos, hemos creado una BD vacía en **ubuserver02** :
+
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P5/CONTACTOSdeUbu2AntesDEcopiar.png) 
+
+A continuación vamos a volcar el contenido del fichero `contactos.sql` que nos hemos traído desde **ubuserver01**, en fichero vacío de contactos en la BD de **ubuserver02** :
+
+		$ mysql -u root -p contactos < /tmp/contactos.sql
