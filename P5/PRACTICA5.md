@@ -166,5 +166,12 @@ Como vemos en la siguiente imágen, el campo `Seconds_Behind_Master: 0`, es dist
 
 ![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P5/SLAVEstatus.png) 
 
+Para finalizar este apartado, y la práctica, vemos cómo se ha sincronizado automáticamente el **_esclavo_** al actualizar y añadirle nuevos elementos a los _datos_ del **_maestro_** : 
 
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P5/MASTERstatusFinal.png) 
+
+-- Aquí se ve cómo se ha actualizado la tabla sin haber hecho ninguna inserción de manera manual en esta máquina.
+Actualización automática del **_esclavo_** : 
+
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P5/SLAVEstatusFinal.png) 
 
