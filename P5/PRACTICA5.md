@@ -158,3 +158,13 @@ Por último, volvemos al **_maestro_** y volvemos a activar las tablas para que 
 
 		mysql> UNLOCK TABLES;
 
+Para comprobar el correcto funcionamiento, vamos al **_esclavo_** y ejecutamos, dentro de **MySQL** : 
+
+		mysql> SHOW SLAVE STATUS\G;
+		
+Como vemos en la siguiente imágen, el campo `Seconds_Behind_Master: 0`, es distinto de `NULL`, esto quiere decir que todo esta funcionando perfectamente : 
+
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P5/SLAVEstatus.png) 
+
+
+
