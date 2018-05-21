@@ -8,7 +8,7 @@
 	
 	Accedemos a modo **root** y entramos a la interfaz en línea de comandos de **MySQL** con : 
 
-			$ mysql -uroot -p
+			$ mysql -u root -p
 			
 	Para entrar me pide insertar una clave. Esa clave se corresponde a la clave de _root_ de la máquina _ubuserver01_. Tras esto, ya estaremos dentro del monitor de MySQL.
 
@@ -40,9 +40,34 @@
 
 ![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P5/tablaDATOSubuserver01.png) 
 
+Y salimos de la interfaz de comandos en línea.
 
 
 ___
 
-* **SEGUNDO PUNTO : Configuración del cortafuegos**
+* **SEGUNDO PUNTO : Realizar una copia de seguridad con mysqldump**
 
+Antes de hacer la copia de seguridad en el archivo .sql debemos evitar que se acceda a la BD para cambiar nada, bloqueando las tablas.
+
+Para ello, de nuevo en la máquina **ubuserver01**, entramos en **root**, y accedemos al monitor mysql. 
+
+		Una vez dentro del monitor de comandos :
+		mysql> FLUSH TABLES WITH READ LOCK;
+		Y salimos : 
+		mysql> quit
+		
+Ahora ya sí podemos hacer el _mysqldump_ para guardar los datos. En el servidor principal (**ubuserver01**) hacemos :
+
+		$ mysqldump contactos -u root -p > /tmp/contactos.sql
+
+Como habíamos bloqueado las tablas, debemos desbloquearlas (quitar el “LOCK”):
+
+		$ mysql -uroot -p
+		introducimos la clave de root de ubuserver01
+		
+		mysql> UNLOCK TABLES;
+		mysql> quit
+		
+Ahora, vamos a irnos a la máquina **ubuserver02**, la cuál usaremos como esclavo, vamos a entrar al modo **root**, y vamos a coger el fichero `contactos.sql`guardado en _/tmp/_ en la máquina1 :
+
+		$ scp 192.168.18.132:/tmp/contactos.sql /tmp/
