@@ -76,3 +76,10 @@ Aquí vemos cómo se ha realizado correctamente la copia :
 
 ![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P5/scpDEubuserver1Enubuserver2.png) 
 
+Ahora, en la **máquina 2**, vamos a entrar en la interfaz de comandos en línea de **MySQL** y vamos a crear la BD vacía a la que le vamos a pasar la copia de la que tenemos en la máquina _ubuserver01_ :
+
+		$ mysql -u root -p
+		Introducimos la clave correspondiente a ubuserver02
+		
+		mysql> create database contactos;
+		mysql> quit
