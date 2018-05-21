@@ -126,5 +126,26 @@ Como vemos, no me ha dado ningún error :
  
  Esto es tan sencillo debido a que mi versión de **MySQL** es superior a la 5.5 (5.7.22).
  
+Y reiniciamos el servicio en el esclavo :
+
+			$ /etc/init.d/mysql restart 
+			
+Podemos comprobar que aquí tampoco me ha dado ningún error : 
+
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P5/restartenESCLAVOsinerrores.png) 
+
+Ya podemos volver al **_maestro_** para crear un usuario y darle permisos de acceso para la replicación : 
+
+		mysql> CREATE USER esclavo IDENTIFIED BY 'esclavo';
+		mysql> GRANT REPLICATION SLAVE ON *.* TO 'esclavo'@'%' IDENTIFIED BY 'esclavo';
+		mysql> FLUSH PRIVILEGES;
+		mysql> FLUSH TABLES;
+		mysql> FLUSH TABLES WITH READ LOCK;
+		
+		Para finalizar la configuración del mestro, obtenemos los datos de la BD que vamos a replicar para usarlos después en la configuración del esclavo :
+		mysql> SHOW MASTER STATUS;
+		
+
+
  
 
