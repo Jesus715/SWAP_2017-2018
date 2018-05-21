@@ -145,7 +145,16 @@ Ya podemos volver al **_maestro_** para crear un usuario y darle permisos de acc
 		Para finalizar la configuración del mestro, obtenemos los datos de la BD que vamos a replicar para usarlos después en la configuración del esclavo :
 		mysql> SHOW MASTER STATUS;
 		
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P5/BDMaestro.png) 
 
-
+Volvemos a la máquina **_esclavo_**, entramos en mysql y le damos los datos del **_maestro_**. Como mi versión de **MySQL** es superior a la 5.5 (5.7.22), ejecuto la siguiente sentencia : 
  
+		mysql> CHANGE MASTER TO MASTER_HOST='192.168.18.132', 			MASTER_USER='esclavo', MASTER_PASSWORD='esclavo', MASTER_LOG_FILE='mysql-bin.000001', MASTER_LOG_POS=980, MASTER_PORT=3306;
+		
+		Y arrancamos el esclavo :
+		mysql> START SLAVE;
+		
+Por último, volvemos al **_maestro_** y volvemos a activar las tablas para que puedan meterse nuevos datos en el **_maestro_** :
+
+		mysql> UNLOCK TABLES;
 
