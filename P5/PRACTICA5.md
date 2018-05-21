@@ -108,4 +108,11 @@ ___
 
 Vamos a configurar el **_maestro_** en la máquina **ubuserver01**, y el **_esclavo_** en la máquina **ubuserver02**.
 
-En **ubuserver01**, entramos en modo **root** y editamos el archivo _/etc/mysql/mysql.conf.d/mysqld.cnf_ con la herramienta **vim** para dejarlo de la siguiente manera :
+En **ubuserver01**, entramos en modo **root** y editamos el archivo _/etc/mysql/mysql.conf.d/mysqld.cnf_ con la herramienta **vim** para dejarlo de la siguiente manera, siguiendo las indicaciones del guión de prácticas :
+
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P5/mysqldCONFenUBUSERVER01maestro.png) 
+
+Seguidamente, tenemos que reiniciar el servicio :
+
+			$ /etc/init.d/mysql restart
+
