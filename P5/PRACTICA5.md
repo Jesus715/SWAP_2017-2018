@@ -71,3 +71,8 @@ Como habíamos bloqueado las tablas, debemos desbloquearlas (quitar el “LOCK�
 Ahora, vamos a irnos a la máquina **ubuserver02**, la cuál usaremos como esclavo, vamos a entrar al modo **root**, y vamos a coger el fichero `contactos.sql`guardado en _/tmp/_ en la máquina1 :
 
 		$ scp 192.168.18.132:/tmp/contactos.sql /tmp/
+		
+Aquí vemos cómo se ha realizado correctamente la copia : 
+
+![](https://github.com/Jesus715/SWAP_2017-2018/blob/master/P5/scpDEubuserver1Enubuserver2.png) 
+
